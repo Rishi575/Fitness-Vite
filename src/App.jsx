@@ -3,14 +3,13 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Shared/Home'
 import Login from './pages/Shared/Login'
-// import Register from './pages/Shared/Register'
 import UserLayout from './layout/UserLayout'
-import {UserDashboard} from './pages/User/UserDashboard'
 import AdminLayout from './layout/AdminLayout'
 import AdminDashboard from './pages/Admin/AdminDashboard'
 import NotFound from './pages/Shared/NotFound'
 import HomeLayout from './layout/HomeLayout'
 import AdminUser from './pages/Admin/AdminUser'
+import { UserDashboard } from './pages/User/UserDashboard'
 
 const App = () => {
     return (
@@ -23,7 +22,7 @@ const App = () => {
                     </Route>
 
                     <Route element={<UserLayout />}>
-                        <Route path='/user/dashboard' element={<UserDashboard />} />
+                        <Route path='/user/dashboard' element={<UserDashboard/>} />
                     </Route>
                     
                     <Route element={<AdminLayout />}>
