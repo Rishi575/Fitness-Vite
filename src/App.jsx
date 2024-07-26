@@ -5,7 +5,7 @@ import Home from './pages/Shared/Home'
 import Login from './pages/Shared/Login'
 // import Register from './pages/Shared/Register'
 import UserLayout from './layout/UserLayout'
-import UserDashboard from './pages/User/UserDashboard'
+import {UserDashboard} from './pages/User/UserDashboard'
 import AdminLayout from './layout/AdminLayout'
 import AdminDashboard from './pages/Admin/AdminDashboard'
 import NotFound from './pages/Shared/NotFound'
@@ -20,11 +20,10 @@ const App = () => {
                     <Route element={<HomeLayout />}>
                         <Route path='/' element={<Home />} />
                         <Route path='/login' element={<Login />} />
-                        {/* <Route path='/register' element={<Register />} /> */}
                     </Route>
 
                     <Route element={<UserLayout />}>
-                        <Route path='/dashboard' element={<UserDashboard />} />
+                        <Route path='/user/dashboard' element={<UserDashboard />} />
                     </Route>
                     
                     <Route element={<AdminLayout />}>
