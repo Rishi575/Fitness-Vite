@@ -14,7 +14,7 @@ const Footer = () => {
         <a href='#' target='_blank' className='h-8 w-8 rounded-md text-primary hover:bg-primary/50 hover:text-background flex justify-center items-center'>
           <Twitter className='h-6 w-6' />
         </a>
-        <ModeToggle/>
+        {/* <ModeToggle/> */}
       </div>
     </div>
   )

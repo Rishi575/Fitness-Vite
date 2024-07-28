@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Button } from '../ui/button'
+import { ModeToggle } from '../mode-toggle'
 
 const Navbar = () => {
   const NavLinks = [
@@ -34,7 +35,10 @@ const Navbar = () => {
           ))
         }
       </div>
-      <Button className="absolute right-5 rounded-3xl">Join Now</Button>
+      {/* <Button className="absolute right-5 rounded-3xl">Join Now</Button> */}
+      <div className="absolute right-5">
+      <ModeToggle/>
+      </div>
     </div>
   )
 }
