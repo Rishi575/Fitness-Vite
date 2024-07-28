@@ -22,7 +22,7 @@ const App = () => {
                     </Route>
 
                     <Route element={<UserLayout />}>
-                        <Route path='/user/dashboard' element={<UserDashboard/>} />
+                        <Route path='/dashboard' element={<UserDashboard/>} />
                     </Route>
                     
                     <Route element={<AdminLayout />}>

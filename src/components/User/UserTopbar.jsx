@@ -5,10 +5,10 @@ import { Button } from '../ui/button'
 const UserTopbar = () => {
     return (
         <>
-        <div className='w-11/12 h-1/4 flex justify-center items-center absolute right-12 bg-primary rounded-e rounded-s'>
+        <div className='w-11/12 h-1/4 flex justify-center items-center absolute right-12 bg-gray-300 rounded-e rounded-s'>
         <div className='absolute flex justify-center items-center w-full'>
             <Avatar className=' bg-gray-400 flex justify-center items-center w-28 h-28 text-3xl font-bold text-background absolute left-48'>RP</Avatar>
-            <div className='flex justify-start absolute left-96 flex-col gap-2 text-background'>
+            <div className='flex justify-start absolute left-96 flex-col gap-2 text-foreground font-bold font-serif text-lg'>
                 <div>Name : User</div>
                 <div>Email : User@gamil.com</div>
             </div>

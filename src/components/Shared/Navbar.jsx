@@ -19,7 +19,7 @@ const Navbar = () => {
     }
   ]
   return (
-    <div className="absolute top-0 left-0 w-full h-[8vh] flex flex-row justify-center items-center">
+    <div className="absolute top-0 left-0 w-full h-[8vh] flex flex-row justify-center items-center bg-background">
       <div className="w-1/4 h-full text-primary font-bold flex justify-start items-center text-lg absolute left-5"> Fitness</div>
       <div className='w-2/4 h-full font-bold flex flex-row justify-center items-center gap-8'>
         {/* <Link to='/'>Home </Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
         {
           NavLinks.map((links, index) => (
             <li key={index} className='list-none'>
-              <NavLink to={links.path}>
+              <NavLink to={links.path} className='text-foreground'>
                 {links.title}
               </NavLink>
             </li>

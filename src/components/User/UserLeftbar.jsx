@@ -6,7 +6,7 @@ const UserLeftbar = () => {
     const AdminLinks = [
         {
             title: "Dashboard",
-            path: "./user/dashboard",
+            path: "./dashboard",
             // icon: ,
         },{
             title: "User",
@@ -16,13 +16,13 @@ const UserLeftbar = () => {
     ]
   return (
     <>
-    <div className='flex justify-center items-center bg-primary absolute w-44 h-5/6 top-40 left-12 rounded-s rounded-e'>
+    <div className='flex justify-center items-center bg-gray-300 absolute w-44 h-5/6 top-40 left-12 rounded-s rounded-e'>
     <div className='h-screen w-1/6 flex justify-center items-center flex-col pt-10'>
         <div className='h-5/6 w-full flex flex-col items-center justify-start absolute'>
             {
                 AdminLinks.map((data, index)=>(
                     <NavLink key={index} to={data.path} className={''}>
-                        <span>
+                        <span className='font-bold font-serif text-lg'>
                             {data.title}
                         </span>
                     </NavLink>

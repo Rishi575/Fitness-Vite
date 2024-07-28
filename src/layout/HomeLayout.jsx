@@ -5,13 +5,12 @@ import { Outlet } from 'react-router-dom'
 
 const HomeLayout = () => {
     return (
-        <>
-            <div className='h-screen w-screen overflow-hidden overflow-y-auto m-0 p-0'>
-                <Navbar />
+        <div className="h-screen w-screen flex flex-col overflow-hidden m-0 p-0">
+            <Navbar />
+            <div className="flex-1 overflow-y-auto">
                 <Outlet />
-                <Footer />
             </div>
-        </>
+        </div>
     )
 }
 

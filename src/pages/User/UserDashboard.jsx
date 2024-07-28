@@ -39,13 +39,13 @@ const tau = 2 * pi;
 
 export const UserDashboard = () => (
   <>
-    <div className='w-full absolute bg-primary top-4 rounded-s rounded-e'>
+    <div className='w-full absolute bg-gray-300 top-4 rounded-s rounded-e'>
       <Graph />
     </div>
-    <div className='absolute bg-primary min-w-80 h-4/6 -bottom-64 rounded-s rounded-e left-0'>
+    <div className='absolute bg-gray-300 min-w-80 h-4/6 -bottom-64 rounded-s rounded-e left-0'>
       <Segmentation/>
     </div>
-    <div className='absolute -bottom-64 min-w-80 bg-primary rounded-md left-80'>
+    <div className='min-w-80 bg-gray-300 rounded-md flex justify-center items-center'>
       <Satisfication/>
     </div>
   </>
