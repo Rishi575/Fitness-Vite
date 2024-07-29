@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='bg-background mt-10'>
       <form>
-        <h3 className="foot text-foreground font-serif font-bold">FREE DELIVERY WITHIN 2 DAYS*</h3>
+        <h3 className="foot text-foreground font-serif font-bold">FREE TRAINING FOR 2 DAYS*</h3>
       </form>
       <form className='ali'>
         <form className='foot1  text-background'>

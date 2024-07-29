@@ -120,19 +120,19 @@ function Cards() {
   return (
     <>
       <div className='w-full h-24 bg-transperent absolute top-4 flex-row flex justify-center item-center gap-24 left-0'>
-        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e'>
+        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
           <div className='font-'>
             300+ Trainer's
           </div>
         </div>
-        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e'>
+        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
           <div className='font-'>
             1000+ Clients's
           </div>
         </div>
-        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e'>
+        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
           <div className='font-'>
-            250+ Gyms all over India
+            250+ Gyms in India
           </div>
         </div>
       </div>

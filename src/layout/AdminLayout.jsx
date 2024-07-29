@@ -7,12 +7,12 @@ const AdminLayout = () => {
   return (
     <>
     <Navbar/>
-        <div className='h-screen w-screen overflow-x-hidden m-0 p-0 flex flex-row overflow-y-auto absolute top-14'>
+        <div className='h-screen w-screen overflow-hidden m-0 p-0 flex flex-row overflow-y-auto absolute top-14'>
             <AdminTopbar/>
-            <div>
+            <div className=''>
                 <AdminLeftbar/>
             </div>
-            <div className='flex justify-center items-center absolute top-36 right-12 w-9/12 h-5/6'>
+            <div className='flex-1 justify-center items-center absolute top-36 right-12 w-9/12 h-5/6'>
                 <Outlet/>
             </div>
         </div>
