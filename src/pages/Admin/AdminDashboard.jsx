@@ -1,4 +1,5 @@
 import React from 'react'
+import NumberTicker from "@/components/magicui/number-ticker";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 const segmentationData = [
@@ -31,20 +32,13 @@ const graphData = [
 
 const AdminDashboard = () => {
   return (
-    <>
+    <div className='flex justify-center items-center bg-transperent h-5/6 w-11/12 absolute bottom-0 overflow-y-auto'>
       <div>
         <Cards />
       </div>
-      <div className='w-3/5 h-4/6 absolute bg-gray-300 top-36 right-3 rounded-s rounded-e'>
-        <Graph />
+      <div>
       </div>
-      <div className='absolute bg-gray-300 min-w-80 h-4/6 top-36 rounded-s rounded-e left-0'>
-        <Segmentation />
-      </div>
-      <div className='absolute bg-gray-300 w-full h-5/6 top-full rounded-s rounded-e left-0'>
-        <DCards />
-      </div>
-    </>
+    </div>
   )
 }
 
@@ -121,18 +115,21 @@ function Cards() {
     <>
       <div className='w-full h-24 bg-transperent absolute top-4 flex-row flex justify-center item-center gap-24 left-0'>
         <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
-          <div className='text-black'>
-            300+ Trainer's
+          <div className=' flex flex-row'>
+            <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Unisex-Personal-Trainer-1-1.svg' />
+            <div className='text-black mt-8'> <NumberTicker value={1000} className={'font-sans text-lg'} />+ User's</div>
           </div>
         </div>
         <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
-          <div className='text-black'>
-            1000+ Clients's
+          <div className='text-black flex flex-row'>
+            <img src="https://fitnesszonefit.in/wp-content/uploads/2023/03/Body-Building.svg" className='scale-150 -mb-5 mr-7' />
+            <NumberTicker value={500} className={'font-sans text-lg'} /> + Trainer's
           </div>
         </div>
         <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
-          <div className='text-black'>
-            250+ Gyms in India
+          <div className='text-black flex flex-row justify-center items-center'>
+            <img src="https://fitnesszonefit.in/wp-content/uploads/2023/03/Grossfit-Training.svg" className='scale-105 mr-3' />
+            <NumberTicker value={1500} className={'font-sans text-lg'} />+ Staff 's
           </div>
         </div>
       </div>
@@ -212,7 +209,7 @@ function DCards() {
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/diet-1.svg' className='absolute top-16' />
           </div>
           <div className='font-bold flex justify-center items-start absolute bottom-48 text-black'>
-          Diet Selection
+            Diet Selection
 
           </div>
         </div>
@@ -223,7 +220,7 @@ function DCards() {
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/sports-nutrition.svg' className='absolute bottom-10' />
           </div>
           <div className='font-bold flex justify-center items-center absolute bottom-0 left-28 text-black'>
-          Sports Nutrition
+            Sports Nutrition
 
           </div>
         </div>
@@ -232,7 +229,7 @@ function DCards() {
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Unisex-Personal-Trainer-1-1.svg' className='absolute bottom-10' />
           </div>
           <div className='font-bold flex justify-center items-start absolute bottom-0 text-black'>
-          Personal Trainers
+            Personal Trainers
           </div>
         </div>
         <div className='w-36 h-36 bg-slate-400 rounded-s rounded-e'>
@@ -240,12 +237,12 @@ function DCards() {
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Weight-Training.png' className='absolute bottom-10' />
           </div>
           <div className='font-bold flex justify-center items-start absolute bottom-0 text-black'>
-          All Imported Machineries
+            All Imported Machineries
 
           </div>
         </div>
       </div>
-      
+
     </>
   )
 }

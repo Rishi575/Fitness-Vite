@@ -9,7 +9,10 @@ import AdminDashboard from './pages/Admin/AdminDashboard'
 import NotFound from './pages/Shared/NotFound'
 import HomeLayout from './layout/HomeLayout'
 import AdminUser from './pages/Admin/AdminUser'
-import { UserDashboard } from './pages/User/UserDashboard'
+import UserDashboard from './pages/User/UserDashboard'
+import UserWorkout from './pages/User/UserWorkout'
+import UserSubscription from './pages/User/UserSubscription'
+import UserSession from './pages/User/UserSession'
 
 const App = () => {
     return (
@@ -23,6 +26,9 @@ const App = () => {
 
                     <Route element={<UserLayout />}>
                         <Route path='/dashboard' element={<UserDashboard/>} />
+                        <Route path='/workout' element={<UserWorkout/>} />
+                        <Route path='/payment' element={<UserSubscription/>} />
+                        <Route path='/session' element={<UserSession/>} />
                     </Route>
                     
                     <Route element={<AdminLayout />}>
