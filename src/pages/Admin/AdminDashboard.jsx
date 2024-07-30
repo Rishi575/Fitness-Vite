@@ -54,10 +54,10 @@ function Graph() {
       return (
         <div className="rounded-xl overflow-hidden tooltip-head bg-gray-500">
           <div className="flex items-center justify-between p-2">
-            <div className="text-foreground">User Activity</div>
+            <div className="text-black">User Activity</div>
           </div>
           <div className="tooltip-body text-center p-3">
-            <div className="font-bold text-foreground">{payload[0].value.toFixed(1)}</div>
+            <div className="font-bold text-black">{payload[0].value.toFixed(1)}</div>
             <div className="">Based On User {payload[0].payload.sales} Session</div>
           </div>
         </div>
@@ -71,13 +71,13 @@ function Graph() {
     <div className="flex p-4 h-full flex-col">
       <div>
         <div className="flex items-center">
-          <div className="font-bold text-foreground">User Analists</div>
+          <div className="font-bold text-black">User Analists</div>
           <div className="flex-grow" />
-          <div className="ml-2 text-foreground">Last 9 Months</div>
+          <div className="ml-2 text-black">Last 9 Months</div>
           <div className="ml-6 w-5 h-5 flex justify-center items-center rounded-full icon-background text-foreground">
           </div>
         </div>
-        <div className="font-bold ml-5 text-foreground">Nov - July</div>
+        <div className="font-bold ml-5 text-black">Nov - July</div>
       </div>
 
       <div className="flex-grow">
@@ -121,17 +121,17 @@ function Cards() {
     <>
       <div className='w-full h-24 bg-transperent absolute top-4 flex-row flex justify-center item-center gap-24 left-0'>
         <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
-          <div className='font-'>
+          <div className='text-black'>
             300+ Trainer's
           </div>
         </div>
         <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
-          <div className='font-'>
+          <div className='text-black'>
             1000+ Clients's
           </div>
         </div>
         <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
-          <div className='font-'>
+          <div className='text-black'>
             250+ Gyms in India
           </div>
         </div>
@@ -144,9 +144,9 @@ function Segmentation() {
   return (
     <div className="p-4 h-full">
       <div className="flex justify-between items-center">
-        <div className="text-foreground font-bold">Segmentation</div>
+        <div className="text-black font-bold">Segmentation</div>
       </div>
-      <div className="mt-3">All users</div>
+      <div className="mt-3 text-black">All users</div>
       {segmentationData.map(({ c1, c2, c3, color }) => (
         <div className="flex items-center" key={c1}>
           <div
@@ -180,7 +180,7 @@ function Segmentation() {
       ))}
 
       <div className="flex mt-3 px-3 items-center justify-between bg-details rounded-xl w-36 h-12">
-        <div className="bg-white h-7 w-20 flex justify-center">Details</div>
+        <div className="bg-white rounded-2xl h-7 w-20 flex text-black justify-center">Details</div>
       </div>
     </div>
   );
@@ -194,7 +194,7 @@ function DCards() {
           <div className='flex justify-center items-center'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/biometric-attendance.svg' className='absolute top-16' />
           </div>
-          <div className='font-bold flex justify-center items-center absolute bottom-48 left-28'>
+          <div className='font-bold flex justify-center items-center absolute bottom-48 left-28 text-black'>
             Biometric Attendance
 
           </div>
@@ -203,7 +203,7 @@ function DCards() {
           <div className='flex justify-center items-center'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/parking-facility.svg' className='absolute top-16' />
           </div>
-          <div className='font-bold flex justify-center items-start absolute bottom-48'>
+          <div className='font-bold flex justify-center items-start absolute bottom-48 text-black'>
             Parking Facility
           </div>
         </div>
@@ -211,7 +211,7 @@ function DCards() {
           <div className='flex justify-center items-center'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/diet-1.svg' className='absolute top-16' />
           </div>
-          <div className='font-bold flex justify-center items-start absolute bottom-48'>
+          <div className='font-bold flex justify-center items-start absolute bottom-48 text-black'>
           Diet Selection
 
           </div>
@@ -222,7 +222,7 @@ function DCards() {
           <div className='flex justify-center items-center'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/sports-nutrition.svg' className='absolute bottom-10' />
           </div>
-          <div className='font-bold flex justify-center items-center absolute bottom-0 left-28'>
+          <div className='font-bold flex justify-center items-center absolute bottom-0 left-28 text-black'>
           Sports Nutrition
 
           </div>
@@ -231,7 +231,7 @@ function DCards() {
           <div className='flex justify-center items-center'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Unisex-Personal-Trainer-1-1.svg' className='absolute bottom-10' />
           </div>
-          <div className='font-bold flex justify-center items-start absolute bottom-0'>
+          <div className='font-bold flex justify-center items-start absolute bottom-0 text-black'>
           Personal Trainers
           </div>
         </div>
@@ -239,7 +239,7 @@ function DCards() {
           <div className='flex justify-center items-center'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Weight-Training.png' className='absolute bottom-10' />
           </div>
-          <div className='font-bold flex justify-center items-start absolute bottom-0'>
+          <div className='font-bold flex justify-center items-start absolute bottom-0 text-black'>
           All Imported Machineries
 
           </div>

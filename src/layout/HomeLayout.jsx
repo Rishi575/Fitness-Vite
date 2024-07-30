@@ -1,12 +1,12 @@
-import Footer from '@/components/Shared/Footer'
-import Navbar from '@/components/Shared/Navbar'
+// import Footer from '@/components/Shared/Footer'
+// import Navbar from '@/components/Shared/Navbar'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 const HomeLayout = () => {
     return (
         <div className="h-screen w-screen flex flex-col overflow-hidden m-0 p-0">
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="flex-1 overflow-y-auto">
                 <Outlet />
             </div>

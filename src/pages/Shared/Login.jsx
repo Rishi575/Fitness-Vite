@@ -33,10 +33,10 @@ const Login = () => {
                     <Components.SignUpContainer signinIn={signIn}>
                         <Components.Form className='bg-background'>
                             <Components.Title>Create Account</Components.Title>
-                            <Components.Input type='text' placeholder='Name' />
-                            <Components.Input type='email' placeholder='Email' />
-                            <Components.Input type='password' placeholder='Password' />
-                            <Link to="/Home">
+                            <Components.Input type='text' placeholder='Name' className='text-black'/>
+                            <Components.Input type='email' placeholder='Email' className='text-black'/>
+                            <Components.Input type='password' placeholder='Password' className='text-black'/>
+                            <Link to="/">
                                 <Components.Button className='bg-primary '>Sign Up</Components.Button>
                             </Link>
                         </Components.Form>
@@ -45,8 +45,8 @@ const Login = () => {
                     <Components.SignInContainer signinIn={signIn}>
                         <Components.Form>
                             <Components.Title>Sign in</Components.Title>
-                            <Components.Input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                            <Components.Input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                            <Components.Input type='email' placeholder='Email' className='text-black' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <Components.Input type='password' placeholder='Password' className='text-black' value={password} onChange={(e) => setPassword(e.target.value)}/>
                             <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
                             {/* <Link to="/Home"> */}
                                 <Components.Button className='bg-primary'  onClick={handleSignIn}>Sigin In</Components.Button>

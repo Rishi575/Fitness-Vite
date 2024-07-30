@@ -74,13 +74,13 @@ function Graph() {
     <div className="flex p-4 h-full flex-col">
       <div>
         <div className="flex items-center">
-          <div className="font-bold text-foreground">Your Workout Summary</div>
+          <div className="font-bold text-black font-serif">Your Workout Summary</div>
           <div className="flex-grow" />
-          <div className="ml-2 text-foreground">Last 9 Months</div>
+          <div className="ml-2 text-black font-serif">Last 9 Months</div>
           <div className="ml-6 w-5 h-5 flex justify-center items-center rounded-full icon-background text-foreground">
           </div>
         </div>
-        <div className="font-bold ml-5 text-foreground">Nov - July</div>
+        <div className="font-bold ml-5 text-black">Nov - July</div>
       </div>
 
       <div className="flex-grow">
@@ -123,9 +123,9 @@ function Segmentation() {
   return (
     <div className="p-4 h-full">
       <div className="flex justify-between items-center">
-        <div className="text-white font-bold">Segmentation</div>
+        <div className="text-black font-bold font-serif">Segmentation</div>
       </div>
-      <div className="mt-3">All users</div>
+      <div className="mt-3 text-black font-serif">All users</div>
       {segmentationData.map(({ c1, c2, c3, color }) => (
         <div className="flex items-center" key={c1}> 
           <div
@@ -159,7 +159,7 @@ function Segmentation() {
       ))}
 
       <div className="flex mt-3 px-3 items-center justify-between bg-details rounded-xl w-36 h-12">
-        <div className="bg-gray-300 h-7 w-20 flex justify-center rounded-md">Details</div>
+        <div className="bg-white h-7 w-20 flex justify-center rounded-md text-black ">Details</div>
       </div>
     </div>
   );

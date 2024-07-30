@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom'
 const AdminLayout = () => {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
         <div className='h-screen w-screen overflow-hidden m-0 p-0 flex flex-row overflow-y-auto absolute top-14'>
             <AdminTopbar/>
             <div className=''>
