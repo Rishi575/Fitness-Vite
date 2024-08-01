@@ -13,6 +13,7 @@ import UserDashboard from './pages/User/UserDashboard'
 import UserWorkout from './pages/User/UserWorkout'
 import UserSubscription from './pages/User/UserSubscription'
 import UserSession from './pages/User/UserSession'
+import Navbar from './components/Shared/Navbar'
 
 const App = () => {
     return (

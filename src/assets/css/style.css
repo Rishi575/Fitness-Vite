@@ -60,7 +60,7 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+    --shadow: 0 14px 28px rgb(255, 255, 255), 0 10px 10px rgba(255, 255, 255, 0.22);
     --dashboard:rgba(189, 185, 185, 0.874);
   }
 }
@@ -75,7 +75,7 @@
   }
 }
 .active{
-  color: #cca886;
+  color: #ff7b00;
 }
 
 .touchable {

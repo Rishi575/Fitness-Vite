@@ -13,7 +13,7 @@ const UserTopbar = () => {
                         <div>Email : Admin@gamil.com</div>
                     </div>
                     <div className='w-full flex justify-center items-center mr-10'>
-                        <Button className='bg-gray-400 border-gray-400 border-2 font-serif text-foreground text-lg absolute right-20'><a href='/'>Logout</a></Button>
+                    <ShinyButton text='Logout' className={'bg-background border-shadow font-serif text-foreground text-lg absolute right-20'}><a href='/'></a></ShinyButton>
                     </div>
                 </div>
             </div>

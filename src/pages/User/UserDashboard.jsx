@@ -1,13 +1,9 @@
 import React from 'react'
 import NumberTicker from "@/components/magicui/number-ticker";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import Globe from '@/components/magicui/globe';
 
-const segmentationData = [
-  { c1: 'Not Specified', c2: '800', c3: '#363636', color: '#535353' },
-  { c1: 'Male', c2: '441', c3: '#818bb1', color: '#595f77' },
-  { c1: 'Female', c2: '233', c3: '#2c365d', color: '#232942' },
-  { c1: 'Other', c2: '126', c3: '#334ed8', color: '#2c3051' },
-];
+
 
 const graphData = [
   'Nov',
@@ -32,17 +28,18 @@ const graphData = [
 
 const UserDashboard = () => {
   return (
-    <div className='flex justify-center items-center bg-transperent h-5/6 w-11/12 absolute bottom-0 overflow-y-auto'>
+    <div className='flex justify-center items-center bg-transperent h-5/6 w-full absolute bottom-0 overflow-hidden'>
       <div>
         <Cards />
       </div>
       <div className='flex flex-row justify-center items-center w-full mt-28'>
-        <div className='w-3/5 bg-gray-300 rounded-xl absolute left-10'>
+        <div className='w-3/5 border-shadow border-2 rounded-xl absolute left-20'>
           <Graph />
         </div>
-        <div className='flex bg-gray-300 absolute right-10 rounded-xl h-2/3'>
-          <Segmentation/>
+        <div className='flex  justify-center items-center overflow-hidden'>
+            <Globe className="flex -mr-36 mt-28" />
         </div>
+        
       </div>
     </div>
   )
@@ -71,13 +68,13 @@ function Graph() {
     <div className="flex p-4 h-full flex-col">
       <div>
         <div className="flex items-center">
-          <div className="font-bold text-black">Your Analists</div>
+          <div className="font-bold text-foreground">Your Analists</div>
           <div className="flex-grow" />
-          <div className="ml-2 text-black">Last 9 Months</div>
+          <div className="ml-2 text-foreground">Last 9 Months</div>
           <div className="ml-6 w-5 h-5 flex justify-center items-center rounded-full icon-background text-foreground">
           </div>
         </div>
-        <div className="font-bold ml-5 text-black">Nov - July</div>
+        <div className="font-bold ml-5 text-foreground">Nov - July</div>
       </div>
 
       <div className="flex-grow">
@@ -120,20 +117,20 @@ function Cards() {
   return (
     <>
       <div className='w-full h-24 bg-transperent absolute top-4 flex-row flex justify-center item-center gap-24 left-0'>
-        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+        <div className='w-3/12 h-24 border-2 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
           <div className=' flex flex-row'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Unisex-Personal-Trainer-1-1.svg' />
-            <div className='text-black mt-8'> <NumberTicker value={1500} className={'font-sans text-lg'} /> + Trainer's</div>
+            <div className='text-foreground mt-8'> <NumberTicker value={1500} className={'font-sans text-lg'} /> + Trainer's</div>
           </div>
         </div>
-        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
-          <div className='text-black flex flex-row'>
+        <div className='w-3/12 h-24 border-shadow border-2 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+          <div className='text-foreground flex flex-row'>
             <img src="https://fitnesszonefit.in/wp-content/uploads/2023/03/Body-Building.svg" className='scale-150 -mb-5 mr-7' />
             <NumberTicker value={1500} className={'font-sans text-lg'} /> + Clients's
           </div>
         </div>
-        <div className='w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
-          <div className='text-black flex flex-row justify-center items-center'>
+        <div className='w-3/12 h-24 border-shadow border-2 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+          <div className='text-foreground flex flex-row justify-center items-center'>
             <img src="https://fitnesszonefit.in/wp-content/uploads/2023/03/Grossfit-Training.svg" className='scale-105 mr-3' />
             <NumberTicker value={250} className={'font-sans text-lg'} /> + Gyms in India
           </div>
@@ -143,51 +140,6 @@ function Cards() {
   )
 }
 
-function Segmentation() {
-  return (
-    <div className="p-4 h-full">
-      <div className="flex justify-between items-center">
-        <div className="text-black font-bold">Segmentation</div>
-      </div>
-      <div className="mt-3 text-black">All users</div>
-      {segmentationData.map(({ c1, c2, c3, color }) => (
-        <div className="flex items-center" key={c1}>
-          <div
-            className="w-2 h-2 rounded-full"
-            style={{
-              background: color,
-            }}
-          />
-          <div className="ml-2" style={{ color }}>
-            {c1}
-          </div>
-          <div className="flex-grow" />
-          <div className="" style={{ color }}>
-            {c2}
-          </div>
-          <div className=' absolute right-28 font-bold'>------</div>
-          <div className="ml-2 w-12 card-stack-border" />
-          <div className="ml-2 h-8">
-            <div
-              className="w-20 h-28 rounded-lg overflow-hidden"
-              style={{
-                background: c3,
-              }}
-            >
-              {c1 === 'Other' && (
-                <img src="https://assets.codepen.io/3685267/res-react-dash-user-card.svg" alt="" />
-              )}
-            </div>
-          </div>
-        </div>
-      ))}
-
-      <div className="flex mt-3 px-3 items-center justify-between bg-details rounded-xl w-36 h-12">
-        <div className="bg-white rounded-s rounded-e h-8 w-20  flex text-black justify-center items-center font-serif">Details</div>
-      </div>
-    </div>
-  );
-}
 
 function DCards() {
   return (

@@ -27,7 +27,7 @@ const UserLeftbar = () => {
     ]
   return (
     <>
-    <div className='flex justify-center items-center bg-gray-300 w-10 h-5/6 rounded-s rounded-e'>
+    <div className='flex justify-center items-center bg-primary w-10 h-5/6 rounded-s rounded-e'>
     <div className='h-screen w-1/6 flex justify-center items-center flex-col '>
         <div className=' absolute top-5'>
             {

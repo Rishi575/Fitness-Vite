@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <>
         <Navbar/>
-            <div className='relative mt-16'>
+            <div className='relative mt-5'>
                 <img src={Asta} alt="Background" className="w-full rounded-xl" />
                 <div className="absolute top-0 left-0 right-0 p-4 bg-opacity-75 h-full w-6/12 backdrop-blur-md flex justify-center items-center ">
                     <p className='flex justify-center items-center font-bold text-foreground font-serif text-3xl'>Build Your Body And Soul<br/> Thats the Way of....!<br/> Black Wolf...!</p>
