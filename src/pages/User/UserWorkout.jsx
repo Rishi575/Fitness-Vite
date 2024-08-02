@@ -1,6 +1,6 @@
 import BoxReveal from '@/components/magicui/box-reveal';
 import { Button } from '@/components/ui/button';
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const segmentationData = [
@@ -11,29 +11,32 @@ const segmentationData = [
 ];
 
 const UserWorkout = () => {
+   
     return (
         <div className='flex justify-center items-center bg-transperent h-5/6 w-11/12 absolute bottom-0 overflow-hidden'>
-            <div className='flex justify-center items-center flex-col mr-96 mb-24'>
+            <div className='flex justify-center items-center flex-col mr-96 -mt-44'>
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                     <p className="text-[3.5rem] font-semibold">
                         Yet To Be Complete<span className="text-[#5046e6]">.</span>
                     </p>
                 </BoxReveal>
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-        <h2 className="mt-[.5rem] text-[1rem]">
-          Today's{" "}
-          <span className="text-[#5046e6]">Task to Complete</span>
-        </h2>
-      </BoxReveal>
- 
-      <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-        Hello
-      </BoxReveal>
+                    <h2 className="mt-[.5rem] text-[1rem]">
+                        Today's{" "}
+                        <span className="text-[#5046e6]">Task to Complete</span>
+                    </h2>
+                </BoxReveal>
+                {/* Table */}
+               
+
+                <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                    {/* Hello */}
+                </BoxReveal>
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                     <Button className="mt-[1.6rem] bg-[#5046e6]">Explore</Button>
                 </BoxReveal>
             </div>
-            <div className='flex border-shadow border-2 absolute right-10 rounded-xl h-2/3'>
+            <div className='flex shade absolute right-10 rounded-xl h-2/3'>
                 <Workout />
             </div>
         </div>

@@ -31,6 +31,7 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import { Avatar } from "./avatar"
+import ShinyButton from "../magicui/shiny-button"
   
   export function NavDropdown() {
     return (

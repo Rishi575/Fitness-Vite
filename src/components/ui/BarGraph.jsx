@@ -1,104 +1,77 @@
-import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Radio from '@mui/material/Radio';
-import { BarChart } from '@mui/x-charts/BarChart';
-import { axisClasses } from '@mui/x-charts/ChartsAxis';
+"use client"
 
-const dataset = [
-  { month: 'January', seoul: 20 },
-  { month: 'February', seoul: 30 },
-  { month: 'March', seoul: 40 },
-  // Add more data as needed
-];
+import { TrendingUp } from "lucide-react"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
-function TickParamsSelector({
-  tickPlacement,
-  tickLabelPlacement,
-  setTickPlacement,
-  setTickLabelPlacement,
-}) {
-  return (
-    <Stack direction="column" justifyContent="space-between" sx={{ width: '100%' }}>
-      <FormControl>
-        <FormLabel id="tick-placement-radio-buttons-group-label">
-          tickPlacement
-        </FormLabel>
-        <RadioGroup
-          row
-          aria-labelledby="tick-placement-radio-buttons-group-label"
-          name="tick-placement"
-          value={tickPlacement}
-          onChange={(event) => setTickPlacement(event.target.value)}
-        >
-          <FormControlLabel value="start" control={<Radio />} label="start" />
-          <FormControlLabel value="end" control={<Radio />} label="end" />
-          <FormControlLabel value="middle" control={<Radio />} label="middle" />
-          <FormControlLabel
-            value="extremities"
-            control={<Radio />}
-            label="extremities"
-          />
-        </RadioGroup>
-      </FormControl>
-      <FormControl>
-        <FormLabel id="label-placement-radio-buttons-group-label">
-          tickLabelPlacement
-        </FormLabel>
-        <RadioGroup
-          row
-          aria-labelledby="label-placement-radio-buttons-group-label"
-          name="label-placement"
-          value={tickLabelPlacement}
-          onChange={(event) => setTickLabelPlacement(event.target.value)}
-        >
-          <FormControlLabel value="tick" control={<Radio />} label="tick" />
-          <FormControlLabel value="middle" control={<Radio />} label="middle" />
-        </RadioGroup>
-      </FormControl>
-    </Stack>
-  );
-}
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
+const chartData = [
+  { month: "January", desktop: 186, mobile: 80 },
+  { month: "February", desktop: 305, mobile: 200 },
+  { month: "March", desktop: 237, mobile: 120 },
+  { month: "April", desktop: 73, mobile: 190 },
+  { month: "May", desktop: 209, mobile: 130 },
+  { month: "June", desktop: 214, mobile: 140 },
+]
 
-const valueFormatter = (value) => `${value}mm`;
-
-const chartSetting = {
-  yAxis: [
-    {
-      label: 'rainfall (mm)',
-    },
-  ],
-  series: [{ dataKey: 'seoul', label: 'Seoul rainfall', valueFormatter }],
-  height: 300,
-  sx: {
-    [`& .${axisClasses.directionY} .${axisClasses.label}`]: {
-      transform: 'translateX(-10px)',
-    },
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "hsl(var(--chart-1))",
   },
-};
+  mobile: {
+    label: "Mobile",
+    color: "hsl(var(--chart-2))",
+  },
+} satisfies ChartConfig
 
-export default function TickPlacementBars() {
-  const [tickPlacement, setTickPlacement] = React.useState('middle');
-  const [tickLabelPlacement, setTickLabelPlacement] = React.useState('middle');
-
+export function Component() {
   return (
-    <div style={{ width: '100%' }}>
-      <TickParamsSelector
-        tickPlacement={tickPlacement}
-        tickLabelPlacement={tickLabelPlacement}
-        setTickPlacement={setTickPlacement}
-        setTickLabelPlacement={setTickLabelPlacement}
-      />
-      <BarChart
-        dataset={dataset}
-        xAxis={[
-          { scaleType: 'band', dataKey: 'month', tickPlacement, tickLabelPlacement },
-        ]}
-        {...chartSetting}
-      />
-    </div>
-  );
+    <Card>
+      <CardHeader>
+        <CardTitle>Bar Chart - Multiple</CardTitle>
+        <CardDescription>January - June 2024</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ChartContainer config={chartConfig}>
+          <BarChart accessibilityLayer data={chartData}>
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="month"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+              tickFormatter={(value) => value.slice(0, 3)}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent indicator="dashed" />}
+            />
+            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
+            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+          </BarChart>
+        </ChartContainer>
+      </CardContent>
+      <CardFooter className="flex-col items-start gap-2 text-sm">
+        <div className="flex gap-2 font-medium leading-none">
+          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+        </div>
+        <div className="leading-none text-muted-foreground">
+          Showing total visitors for the last 6 months
+        </div>
+      </CardFooter>
+    </Card>
+  )
 }

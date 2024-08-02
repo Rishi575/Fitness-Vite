@@ -4,6 +4,7 @@ import { Button } from '../ui/button'
 import { ModeToggle } from '../mode-toggle'
 import { Avatar } from '../ui/avatar'
 import { NavDropdown } from '../ui/NavDropDown'
+import ShinyButton from '../magicui/shiny-button'
 
 
 const Navbar = () => {

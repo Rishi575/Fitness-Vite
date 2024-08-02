@@ -14,6 +14,7 @@ import UserWorkout from './pages/User/UserWorkout'
 import UserSubscription from './pages/User/UserSubscription'
 import UserSession from './pages/User/UserSession'
 import Navbar from './components/Shared/Navbar'
+import AdminTrainers from './pages/Admin/AdminTrainers'
 
 const App = () => {
     return (
@@ -35,6 +36,7 @@ const App = () => {
                     <Route element={<AdminLayout />}>
                         <Route path='/admin/dashboard' element={<AdminDashboard />} />
                         <Route path='/admin/users' element={<AdminUser/>} />
+                        <Route path='/admin/trainers' element={<AdminTrainers/>} />
                     </Route>
 
                     <Route path='*' element={<NotFound />} />
