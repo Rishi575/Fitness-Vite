@@ -37,7 +37,7 @@ const Login = () => {
                             <Components.Input type='email' placeholder='Email' className='text-black'/>
                             <Components.Input type='password' placeholder='Password' className='text-black'/>
                             <Link to="/">
-                                <Components.Button className='bg-primary '>Sign Up</Components.Button>
+                                <Components.Button className='primarycolor '>Sign Up</Components.Button>
                             </Link>
                         </Components.Form>
                     </Components.SignUpContainer>
@@ -49,13 +49,13 @@ const Login = () => {
                             <Components.Input type='password' placeholder='Password' className='text-black' value={password} onChange={(e) => setPassword(e.target.value)}/>
                             <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
                             {/* <Link to="/Home"> */}
-                                <Components.Button className='bg-primary'  onClick={handleSignIn}>Sigin In</Components.Button>
+                                <Components.Button className='primarycolor'  onClick={handleSignIn}>Sigin In</Components.Button>
                             {/* </Link> */}
                         </Components.Form>
                     </Components.SignInContainer>
 
                     <Components.OverlayContainer signinIn={signIn}>
-                        <Components.Overlay signinIn={signIn} className='bg-primary'>
+                        <Components.Overlay signinIn={signIn} className='primarycolor'>
 
                             <Components.LeftOverlayPanel signinIn={signIn} >
                                 <Components.Title className='text-background'>Welcome Back!</Components.Title>

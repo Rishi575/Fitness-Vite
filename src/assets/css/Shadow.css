@@ -1,3 +1,9 @@
 .shade{
     box-shadow: var(--shadow);
 }
+.primarycolor{
+    background-image: linear-gradient(to right top, #ff0053, #ff2561, #fe396e, #fc487a, #f95586, #f566ac, #e97acf, #d58feb, #99b3ff, #43d2ff, #00eaff, #5ffbf1);
+}
+.textcolor{
+    background-color: linear-gradient(to right top, #ff0053, #ff2561, #fe396e, #fc487a, #f95586, #f566ac, #e97acf, #d58feb, #99b3ff, #43d2ff, #00eaff, #5ffbf1);
+}
