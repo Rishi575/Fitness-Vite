@@ -3,9 +3,11 @@ import '@/assets/css/Login.css'
 import { Link, useNavigate } from 'react-router-dom';
 import * as Components from './logcom';
 
+import toast from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
+
 
 const Login = () => {
-
     const adminCredentials = {
         email: 'admin@gmail.com',
         password: 'admin'
@@ -18,13 +20,16 @@ const Login = () => {
 
     const handleSignIn = () => {
         if (email === adminCredentials.email && password === adminCredentials.password) {
+            toast.success('Successfully signed in as admin!',{duration:5000});
             navigate('/admin/dashboard');
-        }else if(email === 'user@gmail.com' && password === 'user'){
+        } else if (email === 'user@gmail.com' && password === 'user') {
+            toast.success('Successfully signed in as user!',{duration:5000}); // Success toast
             navigate('/');
-        }else {
-          alert('Invalid email or password');
+        } else {
+            toast.error("This didn't work. Invalid email or password.",{duration : 60000}); // Failure toast
         }
-      };
+    };
+    
 
     return (
         <>
@@ -81,6 +86,10 @@ const Login = () => {
                     </Components.OverlayContainer>
 
                 </Components.Container>
+            <Toaster  
+            position="top-right"
+            reverseOrder={false}
+            />
             </div>
         </>
     )

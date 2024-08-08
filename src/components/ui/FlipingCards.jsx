@@ -12,8 +12,8 @@ const FlippingCard = () => {
     <div className='flex flex-row justify-evenly items-center mt-20'>
       <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
         <div className="card-inner">
-          <div className="card-front ">
-            <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Unisex-Personal-Trainer-1-1.svg' className='scale-80' />
+          <div className="card-front">
+            <img src='https://ik.imagekit.io/wgp1xe3yu/Home/file.jpg?updatedAt=1723094186865' className='scale-80 h-full' />
           </div>
           <div className="card-back">
             <div className=''>
@@ -27,7 +27,7 @@ const FlippingCard = () => {
       <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
         <div className="card-inner">
         <div className="card-front">
-        <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/diet-1.svg' className='scale-80' />
+        <img src='https://ik.imagekit.io/wgp1xe3yu/Home/eren.jpg?updatedAt=1723093071221' className='scale-80 ' />
           </div>
           <div className="card-back">
             <div className=''>
@@ -42,7 +42,7 @@ const FlippingCard = () => {
       <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
         <div className="card-inner">
         <div className="card-front">
-        <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Weight-Training.png' className='scale-80 ' />
+        <img src='https://ik.imagekit.io/wgp1xe3yu/Home/zorojpg.jpg?updatedAt=1723092924678' className='scale-80' />
           </div>
           <div className="card-back">
             <div className='text-background'>
