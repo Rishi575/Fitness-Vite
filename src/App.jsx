@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Shared/Home'
@@ -18,6 +17,7 @@ import AdminTrainers from './pages/Admin/AdminTrainers'
 import '@/assets/css/Shadow.css'
 
 const App = () => {
+
     return (
         <>
             <BrowserRouter>

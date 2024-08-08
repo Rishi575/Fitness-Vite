@@ -31,7 +31,6 @@
   }
   
   .card-front{
-   
     background-color: #fff;
   }
   
@@ -42,7 +41,7 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
-    background-color: black;
+    background-color: var(---background);
     box-shadow: 0px 1px 12px 0px rgba(0,0,0,0.65);
     -webkit-box-shadow: 0px 1px 12px 0px rgba(0,0,0,0.65);
     -moz-box-shadow: 0px 1px 12px 0px rgba(0,0,0,0.65);

@@ -8,10 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   background: var(--background);
   font-family: "Montserrat", sans-serif;
-  position: absolute;
-  top: 80px;
-  right: 250px;
+  margin-top: 100px;
 }
