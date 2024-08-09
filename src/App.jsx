@@ -11,8 +11,7 @@ import AdminUser from './pages/Admin/AdminUser'
 import UserDashboard from './pages/User/UserDashboard'
 import UserWorkout from './pages/User/UserWorkout'
 import UserSubscription from './pages/User/UserSubscription'
-import UserSession from './pages/User/UserSession'
-import Navbar from './components/Shared/Navbar'
+import UserSettings from './pages/User/UserSettings'
 import AdminTrainers from './pages/Admin/AdminTrainers'
 import '@/assets/css/Shadow.css'
 
@@ -31,7 +30,7 @@ const App = () => {
                         <Route path='/dashboard' element={<UserDashboard/>} />
                         <Route path='/workout' element={<UserWorkout/>} />
                         <Route path='/payment' element={<UserSubscription/>} />
-                        <Route path='/session' element={<UserSession/>} />
+                        <Route path='/settings' element={<UserSettings/>} />
                     </Route>
                     
                     <Route element={<AdminLayout />}>
