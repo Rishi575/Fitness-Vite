@@ -1,70 +1,105 @@
+import React, { useState } from 'react'
+import { razorpayconfig, testuserconfig, MembershipPlans } from '@/config/config'
 import { CoolMode } from '@/components/magicui/cool-mode'
 import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
-import { Button } from '@/components/ui/button'
-import React from 'react'
 
 const UserSubscription = () => {
+  const [membership, setMembership] = useState(false)
+  const [plandata, setPlandata] = useState({
+    planName: '',
+    planPrice: 0,
+    planDays: 0,
+    key: ''
+  })
+  const handleUpgrade = (planname, planprice, planddays) => {
+    if (planprice > 0) {
+      const options = {
+        key: razorpayconfig.key,
+        key_secret: razorpayconfig.key_secret,
+        amount: planprice * 100,
+        currency: razorpayconfig.currency,
+        name: razorpayconfig.name,
+        handler: (res) => {
+          alert(res.razorpay_payment_id)
+          setPlandata({
+            planName: planname,
+            planPrice: planprice,
+            planDays: planddays,
+            key: res.razorpay_payment_id
+          })
+          setMembership(true)
+        },
+        prefill: {
+          name: testuserconfig.name,
+          email: testuserconfig.email,
+          contact: testuserconfig.contact
+        },
+        notes: {
+          address: " office",
+        },
+        theme: {
+          color: '#f5f5f7'
+        }
+      };
+      const pay = new window.Razorpay(options);
+      pay.open();
+    }
+    else {
+      alert("invalid amount")
+    }
+
+  }
+
   return (
-    <div className='flex justify-center items-center flex-row gap-20 bg-transperent h-5/6 w-11/12 absolute bottom-0 overflow-y-auto'>
-      <div className='flex justify-center items-center'>
-        <NeonGradientCard className="w-64 h-96 flex items-center justify-center text-center">
-          <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-3xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-            Three Month Package
-          </span>
-          <div className='flex justify-center items-center font-serif text-foreground text-xl absolute top-28'>
-            Free Supliments For 2 week's<br />Offers on First Order <br /> Free Delivery for First 2 Order's
-          </div>
-          <div className='flex justify-center text-center items-center absolute right-14 top-72 text-2xl font-serif bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-transparent'>
-            Only at 2500
-          </div>
-          <div className='flex justify-center items-center h-8 w-24 absolute right-20 bottom-5 bg-foreground rounded-s rounded-e shadow'>
-            <CoolMode>
-              <Button className=' z-10 h-20 w-44 whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]'>Subscribe</Button>
-            </CoolMode>
-          </div>
-        </NeonGradientCard>
-      </div>
-      <div className='flex justify-center items-center'>
-        <NeonGradientCard className="w-64 h-96 flex items-center justify-center text-center">
-          <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-3xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-            Six Month Package
-          </span>
-          <div className='flex justify-center items-center font-serif text-foreground text-xl absolute top-28'>
-            Free Supliments For First Month<br />Offers on First Ten Order's <br /> Free Delivery for First 20 Order's
-          </div>
-          <div className='flex justify-center text-center items-center absolute right-14 top-72 text-2xl font-serif bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-transparent'>
-            Only at 5000
-          </div>
-          <div className='flex justify-center items-center h-8 w-24 absolute right-20 bottom-5 bg-foreground rounded-s rounded-e shadow'>
-            <CoolMode>
-              <Button className=' z-10 h-20 w-44 whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]'>Subscribe</Button>
-            </CoolMode>
-          </div>
-        </NeonGradientCard>
-      </div>
-      <div className='flex justify-center items-center'>
-        <NeonGradientCard className="w-64 h-96 flex items-center justify-center text-center">
-          <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-3xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-            Yearly Package
-          </span>
-          <div className='flex justify-center items-center font-serif text-foreground text-xl absolute top-28'>
-            Free Supliments For 2 week's<br />Offers on First Order <br /> Free Delivery for First 2 Order's
-          </div>
-          <div className='flex justify-center text-center items-center absolute right-14 top-72 text-2xl font-serif bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-transparent'>
-            Only at 7599
-          </div>
-          <div className='flex justify-center items-center h-8 w-24 absolute right-20 bottom-5 bg-foreground rounded-s rounded-e shadow'>
-            <CoolMode>
-              <Button className=' z-10 h-20 w-44 whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]'>Subscribe</Button>
-            </CoolMode>
-          </div>
-        </NeonGradientCard>
-      </div>
+    <>
+      {/* <UserTitlebar Title='Membership Plans' /> */}
+      <div className='flex justify-center items-center bg-transparent h-5/6 w-11/12 absolute bottom-0 overflow-y-auto gap-16'>
+        {membership ? (
+          <>
+            {plandata.planName}
+            {plandata.planDays}
+          </>
+        ) : (
+          <>
+            {
+              MembershipPlans.map((plan) => (
+                <div className='flex flex-col justify-center items-center h-[30vh] w-[20vw] shadow-md shadow-orange-500/60 hover:shadow-orange-700' key={plan.pid}>
+                  <div className='h-1/4 w-full flex justify-center items-center font-bold text-orange-500 text-xl border-2 border-orange-500 '>
+                    {plan.planname}
+                  </div>
+                  <div className='h-2/4 flex flex-col w-full justify-around items-center'>
+                  <div className='flex justify-center items-center font-serif text-foreground text-xl'>
+                      {
+                        plan.price === 0 ? 'Free Plan' : `Rs. ${plan.price}`
+                      }
+                    </div>
+                    <div className='flex justify-center items-center font-serif text-foreground text-xl '>
+                      {plan.days} Days
+                    </div>
+                  </div>
+                  <div className='h-1/4 w-full flex justify-center items-center'>
+                    {
+                      plan.price === 0 ? '' :
+                        (
+                          <>
+                          <div className='flex justify-center items-center bg-foreground h-8 w-24 rounded-md'>
+                          <CoolMode>
+                            <button className='z-10 h-20 w-44 whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]' onClick={() => { handleUpgrade(plan.planname, plan.price, plan.days) }}> Upgrade </button>
+                          </CoolMode>
+                          </div>
+                          </>
+                        )
+                    }
+                  </div>
+                </div>
+              ))
+            }
+          </>
+        )
+        }
 
-      
-
-
-    </div>
+      </div>
+    </>
   )
 }
 
