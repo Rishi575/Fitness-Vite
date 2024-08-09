@@ -1,51 +1,36 @@
 import React, { useEffect } from 'react';
 import Swiper from 'swiper';
-import '@/assets/css/swiper.css'; 
+import '@/assets/css/swiper.css'; // Import Swiper styles
+// import '@/assets/css/swiper.css';
 
 const Swip = () => {
-
-  var swiper = new Swiper(".swiper", {
-    effect: "cards",
-    grabCursor: true,
-    initialSlide: 2,
-    speed: 500,
-    loop: true,
-    rotate: true,
-    mousewheel: {
-    invert: false,
-  },
-});
-
+ 
   return (
     <div className='section'>
-      <div className="content">
-        <div className="info">
+      <div className='content'>
+        <div className='info'>
           <p>
-          Welcome to FitNation Gym 
-            <span className="movie-night"> GYM_MARTIN </span> 
+            Welcome to FitNation Gym 
+            <span className='movie-night'> _GYM_DEADPOOL_ </span> 
             Transform Your Body, Transform Your Life
             At FitNation Gym, we believe in helping you achieve your fitness goals and unlock your potential. Whether you're just starting out or a seasoned athlete, our state-of-the-art facilities and expert trainers are here to guide you every step of the way.
           </p>
-          <button className="btn">Join</button>
+          <button className='btn'>Join</button>
         </div>
-        <div className="swiper">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide">
+        <div className='swiper'>
+          <div className=''>
+            <div className=''>
               <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b6f5eb64-887c-43b1-aaba-d52a4c59a379"
-                alt=""
+                src='https://ik.imagekit.io/wgp1xe3yu/Home/deadpool.jpg?updatedAt=1723195291311'
+                alt=''
+                className='scale-90 -mt-12 rounded-2xl'
               />
-              <div className="overlay">
-                <span>8.5</span>
-                <h2>The Queen's Gambit</h2>
-              </div>
             </div>
-            {/* Add other swiper-slide elements here */}
           </div>
         </div>
       </div>
 
-      <ul className="circles">
+      <ul className='circles'>
         <li></li>
         <li></li>
         <li></li>

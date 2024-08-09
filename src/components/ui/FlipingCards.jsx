@@ -9,7 +9,11 @@ const FlippingCard = () => {
   };
 
   return (
-    <div className='flex flex-row justify-evenly items-center mt-20'>
+    <>
+    <div className='flex justify-center items-center font-serif font-bold text-3xl mt-20'>
+        Choose Your Training
+    </div>
+    <div className='flex flex-row justify-evenly items-center mt-10 mb-10'>
       <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
         <div className="card-inner">
           <div className="card-front">
@@ -54,6 +58,7 @@ const FlippingCard = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
