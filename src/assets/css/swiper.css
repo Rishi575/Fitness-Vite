@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   background: #262626;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -282,3 +282,15 @@
     border-radius: 50%;
   }
 }
+
+/*
+@media (max-width: 750px) {
+  .content {
+     flex-direction: column-reverse;
+  }
+  
+  .btn {
+    margin: 10px auto 40px;
+  }
+}
+*/

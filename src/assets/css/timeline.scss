@@ -44,14 +44,14 @@ body, html {
 	height: 100%;
 }
 body {
-	background: $bg-body;
+	// background: $bg-body;
 	background-size: cover;
 	margin: 0;
 	padding: 0;
 	// font-family: $base-font;
-	line-height: 20px;
+	// line-height: 20px;
 	font-size: 14px;
-	color: $base-font-color;
+	// color: $base-font-color;
 }
 
 img {max-width: 100%;}
@@ -242,7 +242,6 @@ h1, h2, h3, h4 {
 					border-right: 7px solid $timeline-color;
 				}
 			}
-
 			.timeline-icon {
 				left: 0;
 			}

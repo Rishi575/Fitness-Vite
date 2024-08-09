@@ -23,7 +23,6 @@
       height: 70vmin;
       position:relative;
       .card__head {
-        color: rgb(252, 252, 252);
         background: rgba(245, 59, 59, 0.696);
         padding: 0.6em;
         transform: rotate(-90deg);
