@@ -9,6 +9,7 @@ import Carousel from '@/components/ui/carousel'
 import Timeline from '@/components/ui/timeline'
 import Swip from '@/components/ui/swiper'
 import Categories from '@/components/ui/categories'
+import Playlist from '@/components/ui/playlist'
 
 const Home = () => {
     return (
@@ -27,6 +28,9 @@ const Home = () => {
             <div className='flex justify-center items-center flex-col w-full'>
                 <div className=''>
                     <Categories/>
+                </div>
+                <div>
+                    <Playlist/>
                 </div>
                 <div className=' mt-10 w-11/12'>
                     <Timeline />

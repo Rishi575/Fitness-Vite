@@ -11,7 +11,7 @@ const FlippingCard = () => {
   return (
     <>
     <div className='flex justify-center items-center font-serif font-bold text-3xl mt-20'>
-        Choose Your Training
+        Choose Your Method
     </div>
     <div className='flex flex-row justify-evenly items-center mt-10 mb-10'>
       <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>

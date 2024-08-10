@@ -5,7 +5,7 @@ const Timeline = () => {
   return (
     <>
       <div className='header'>
-        <div className="container">
+        <div className="container-timeline">
           <h1 className="logo font-serif text-xl mt-3">
           BEGINNER-<span>TO-PRO</span>
           </h1>
@@ -32,7 +32,7 @@ const Timeline = () => {
             </div>
             <div className="timeline-content">
               <h2 className='font-serif'>BASIC MEMBERSHIP</h2>
-              <p className='font-serif mt-5 mb-5 font-bold'>
+              <p className='font-serif mt-5 mb-5 font-bold text-black'>
               Access to gym equipment and general classes.
               </p>
               <a href="#" className="btn-t">button</a>
@@ -55,7 +55,7 @@ const Timeline = () => {
             </div>
             <div className="timeline-content right">
               <h2 className='font-serif'>PREMIUM MEMBERSHIP</h2>
-              <p className='font-serif mt-5 mb-5 font-bold'>
+              <p className='font-serif mt-5 mb-5 font-bold text-black'>
               Includes additional benefits like personal training sessions or wellness services.
               </p>
               <a href="#" className="btn-t">button</a>
@@ -75,7 +75,7 @@ const Timeline = () => {
             </div>
             <div className="timeline-content">
             <h2 className='font-serif'>FAMILY MEMBERSHIP</h2>
-            <p className='font-serif mt-5 mb-5 font-bold'>
+            <p className='font-serif mt-5 mb-5 font-bold text-black'>
               Options for families to join together.
               </p>
               <a href="#" className="btn-t">button</a>
