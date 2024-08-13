@@ -117,19 +117,19 @@ function Cards() {
   return (
     <>
       <div className='w-full h-24 bg-transperent absolute top-4 flex-row flex justify-center item-center gap-24 left-0'>
-        <div className='shade w-3/12 h-24 border-2 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+        <div className='shade w-3/12 h-24 border-2 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg transition-transform duration-300 hover:scale-105'>
           <div className=' flex flex-row'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Unisex-Personal-Trainer-1-1.svg' />
             <div className='text-foreground mt-8'> <NumberTicker value={1500} className={'font-sans text-lg'} /> + Trainer's</div>
           </div>
         </div>
-        <div className='shade w-3/12 h-24 border-shadow border-2 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+        <div className='shade w-3/12 h-24 border-shadow border-2 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg transition-transform duration-300 hover:scale-105'>
           <div className='text-foreground flex flex-row'>
             <img src="https://fitnesszonefit.in/wp-content/uploads/2023/03/Body-Building.svg" className='scale-150 -mb-5 mr-7' />
             <NumberTicker value={1500} className={'font-sans text-lg'} /> + Clients's
           </div>
         </div>
-        <div className='shade w-3/12 h-24 border-shadow border-2 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+        <div className='shade w-3/12 h-24 border-shadow border-2 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg transition-transform duration-300 hover:scale-105'>
           <div className='text-foreground flex flex-row justify-center items-center'>
             <img src="https://fitnesszonefit.in/wp-content/uploads/2023/03/Grossfit-Training.svg" className='scale-105 mr-3' />
             <NumberTicker value={250} className={'font-sans text-lg'} /> + Gyms in India

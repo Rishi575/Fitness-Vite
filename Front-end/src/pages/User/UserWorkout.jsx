@@ -1,7 +1,14 @@
+import { AnimatedSubscribeButton } from '@/components/magicui/animated-subscribe-button';
 import BoxReveal from '@/components/magicui/box-reveal';
 import { Button } from '@/components/ui/button';
 import React, { useState } from 'react'
 
+
+const initialUserData = [
+    { id: '1', task: 'Running', status: 'Completed' },
+    { id: '2', task: 'Push UP', status: 'Incomplete' },
+    { id: '3', task: 'Pull UP', status: 'Completed' },
+];
 
 const segmentationData = [
     { c1: 'Physical Activities', c2: '800', c3: '#363636', color: '#535353' },
@@ -12,9 +19,19 @@ const segmentationData = [
 
 const UserWorkout = () => {
    
+    const [userData, setUserData] = useState(initialUserData);
+
+    const toggleStatus = (id) => {
+        setUserData(userData.map(user =>
+            user.id === id
+                ? { ...user, status: user.status === 'Completed' ? 'Incomplete' : 'Completed' }
+                : user
+        ));
+    };
+    
     return (
         <div className='flex justify-center items-center bg-transperent h-5/6 w-11/12 absolute bottom-0 overflow-hidden'>
-            <div className='flex justify-center items-center flex-col mr-96 -mt-44'>
+            <div className='flex justify-center items-center flex-col mr-96'>
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                     <p className="text-[3.5rem] font-semibold">
                         Yet To Be Complete<span className="text-[#5046e6]">.</span>
@@ -26,14 +43,54 @@ const UserWorkout = () => {
                         <span className="text-[#5046e6]">Task to Complete</span>
                     </h2>
                 </BoxReveal>
-                {/* Table */}
+                <div className='flex justify-center items-center'>
+                    <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                        <div className="w-full mt-6 p-4 bg-white rounded-lg shadow-lg">
+                            <table className="w-full border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th className="p-2 border-b">User ID</th>
+                                        <th className="p-2 border-b">Task Assigned</th>
+                                        <th className="p-2 border-b">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {initialUserData.map((user) => (
+                                        <tr key={user.id}>
+                                            <td className="p-2 border-b">{user.id}</td>
+                                            <td className="p-2 border-b">{user.task}</td>
+                                            <td className="p-2 border-b">
+                                        <AnimatedSubscribeButton
+                                            buttonColor={user.status === 'Incomplete' ? '#f87171' : '#34d399'} // Red for Incomplete, Green for Completed
+                                            buttonTextColor="#ffffff"
+                                            subscribeStatus={user.status === 'Completed'}
+                                            initialText={
+                                                <span className="group inline-flex items-center">
+                                                    {user.status === 'Incomplete' ? 'Incomplete' : 'Completed'}
+                                                    
+                                                </span>
+                                            }
+                                            changeText={
+                                                <span className="group inline-flex items-center">
+                                                    {/* <CheckIcon className="mr-2 h-4 w-4" /> */}
+                                                    {user.status === 'Incomplete' ? 'Completed' : 'Completed'}
+                                                </span>
+                                            }
+                                            onClick={() => toggleStatus(user.id)}
+                                        />
+                                    </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </BoxReveal>
+                </div>
                
 
+              
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                    {/* Hello */}
-                </BoxReveal>
-                <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                    <Button className="mt-[1.6rem] bg-[#5046e6]">Explore</Button>
+                    <Button className="mt-[1.6rem] bg-[#5046e6]">Submit</Button>
                 </BoxReveal>
             </div>
             <div className='flex shade absolute right-10 rounded-xl h-2/3'>
