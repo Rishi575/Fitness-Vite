@@ -35,7 +35,7 @@ const Timeline = () => {
               <p className='font-serif mt-5 mb-5 font-bold text-black'>
               Access to gym equipment and general classes.
               </p>
-              <a href="#" className="btn-t">button</a>
+              <a href="/payment" className="btn-t">SUBSCRIBE</a>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ const Timeline = () => {
               <p className='font-serif mt-5 mb-5 font-bold text-black'>
               Includes additional benefits like personal training sessions or wellness services.
               </p>
-              <a href="#" className="btn-t">button</a>
+              <a href="/payment" className="btn-t">SUBSCRIBE</a>
             </div>
           </div>
 
@@ -78,7 +78,7 @@ const Timeline = () => {
             <p className='font-serif mt-5 mb-5 font-bold text-black'>
               Options for families to join together.
               </p>
-              <a href="#" className="btn-t">button</a>
+              <a href="/payment" className="btn-t">SUBSCRIBE</a>
             </div>
           </div>
         </div>

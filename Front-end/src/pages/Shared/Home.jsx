@@ -9,7 +9,7 @@ import Carousel from '@/components/ui/carousel'
 import Timeline from '@/components/ui/timeline'
 import Swip from '@/components/ui/swiper'
 import Categories from '@/components/ui/categories'
-import Playlist from '@/components/ui/playlist'
+import BlogPosts from '@/components/ui/blogcard'
 
 const Home = () => {
     return (
@@ -30,7 +30,7 @@ const Home = () => {
                     <Categories/>
                 </div>
                 <div>
-                    <Playlist/>
+                    <BlogPosts/>
                 </div>
                 <div className=' mt-10 w-11/12'>
                     <Timeline />

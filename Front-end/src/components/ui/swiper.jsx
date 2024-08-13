@@ -15,7 +15,7 @@ const Swip = () => {
             Transform Your Body, Transform Your Life
             At FitNation Gym, we believe in helping you achieve your fitness goals and unlock your potential. Whether you're just starting out or a seasoned athlete, our state-of-the-art facilities and expert trainers are here to guide you every step of the way.
           </p>
-          <button className='btn'>Join</button>
+          <a href='/login'><button className='btn'>Join Now</button></a>
         </div>
         <div className='swiper'>
           <div className=''>
