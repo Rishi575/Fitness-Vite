@@ -1,0 +1,24 @@
+:root {
+    --gr: #003d2b;
+    --tx: #b0e9bb;
+    --wh: #f8f8f8;
+  }
+  table {
+    width: 100%;
+    
+  }
+  thead {
+    background-color: var(--gr);
+    color: var(--tx);
+    font-size: 15px;
+  }
+  tbody {
+    font-size: 14px;
+  }
+  tbody td:nth-child(odd) {
+    background-color: #9bd7a6;
+  }
+  tbody td:nth-child(even) {
+    background-color: #8bc596;
+  }
+  
