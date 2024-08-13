@@ -1,14 +1,26 @@
 import React from 'react'
 import NumberTicker from "@/components/magicui/number-ticker";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import BoxReveal from '@/components/magicui/box-reveal';
+import UpdateCards from '@/components/ui/UpdateCards';
 
 const AdminDashboard = () => {
   return (
-    <div className='flex justify-center items-center bg-transperent h-5/6 w-11/12 absolute bottom-0 overflow-y-auto'>
-      <div>
-        
+    <div className='flex justify-center items-center bg-transperent h-5/6 w-11/12 absolute bottom-0 overflow-y-hidden'>
+      <div className='flex justify-center items-center ml-10'>
+        <Cards />
       </div>
-      <div>
+      <div className='absolute top-32 w-full'>
+        <div className='flex justify-center'>
+        <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+          <p className="text-[3.5rem] font-semibold font-serif">
+            Recent Updates's<span className="text-[#5046e6]">.</span>
+          </p>
+        </BoxReveal>
+        </div>
+        <div className='flex justify-center items-center flex-row bg-transperent h-72 w-full'>
+           <UpdateCards/>
+        </div>
       </div>
     </div>
   )
@@ -18,19 +30,19 @@ function Cards() {
   return (
     <>
       <div className='w-full h-24 bg-transperent absolute top-4 flex-row flex justify-center item-center gap-24 left-0'>
-        <div className='shade w-3/12 h-24 bg-background rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+        <div className='shade w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg transition-transform duration-300 hover:scale-105'>
           <div className=' flex flex-row'>
             <img src='https://fitnesszonefit.in/wp-content/uploads/2023/03/Unisex-Personal-Trainer-1-1.svg' />
             <div className='text-foreground mt-8'> <NumberTicker value={1000} className={'font-sans text-lg'} />+ User's</div>
           </div>
         </div>
-        <div className='shade w-3/12 h-24 bg-background rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+        <div className='shade w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg transition-transform duration-300 hover:scale-105'>
           <div className='text-foreground flex flex-row'>
             <img src="https://fitnesszonefit.in/wp-content/uploads/2023/03/Body-Building.svg" className='scale-150 -mb-5 mr-7' />
             <NumberTicker value={500} className={'font-sans text-lg'} /> + Trainer's
           </div>
         </div>
-        <div className='shade w-3/12 h-24 bg-background rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg'>
+        <div className='shade w-3/12 h-24 bg-gray-300 rounded-s rounded-e flex justify-center items-center font-serif font-bold text-lg transition-transform duration-300 hover:scale-105'>
           <div className='text-foreground flex flex-row justify-center items-center'>
             <img src="https://fitnesszonefit.in/wp-content/uploads/2023/03/Grossfit-Training.svg" className='scale-105 mr-3' />
             <NumberTicker value={1500} className={'font-sans text-lg '} />+ Staff 's
